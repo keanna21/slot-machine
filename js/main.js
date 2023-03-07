@@ -1,17 +1,35 @@
-const slotImages = ['one', 'two', 'three'];
- 
+let slotImages = ['😍', '🤩', '😢'];
+
 let bank = 20;
 
-function getSlotImages() {
-    Math.floor(Math.random(slotImages))
-    return 
+function randomSlotImg() {
+    
+     const randomImg= Math.floor(Math.random() *3);
+    
+   return slotImages[randomImg]
+   
 }
+console.log(randomSlotImg())
+ //function placeBet(){
 
-let btn = document.querySelector('button')
-let  restartBtn = document.getElementById('restart')
+ const slotSpot ={
+    img1: document.querySelector('#img1'),
+    img2: document.querySelector('#img2'),
+    img3: document.querySelector('#img3')
+ }
+
+ 
+let randomSlotImg 
+ 
+
+//let betButton = document.querySelector('button')
+//let restartButton = document.querySelector('#restart')
 
 
-Button.addEventListner('click')
+betButton.addEventListner('click')
+
+
+
 // need random function using math.floor & math.random
 //init function (what starts the game)
 //reset function 
