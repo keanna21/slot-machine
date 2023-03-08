@@ -1,6 +1,7 @@
 let slotImages = ['😍', '🤩', '😢'];
 
-let bank = 20;
+let bank = prompt('Enter amount to put into your bank');
+document.querySelector('#bank').innerText = bank
 
 function randomSlotImg() {
     
@@ -10,7 +11,11 @@ function randomSlotImg() {
    
 }
 console.log(randomSlotImg())
- //function placeBet(){
+
+function placeBet(){
+   bank -= 10
+   document.querySelector('#bank').innerText = bank
+}
 
  const slotSpot ={
     img1: document.querySelector('#img1'),
@@ -18,16 +23,53 @@ console.log(randomSlotImg())
     img3: document.querySelector('#img3')
  }
 
- 
-let randomSlotImg 
- 
+ let counter = 0;
 
-//let betButton = document.querySelector('button')
-//let restartButton = document.querySelector('#restart')
+function spinNewImg(){
+   
+      setTimeout(function(){
+
+         slotSpot.img1.innerText = randomSlotImg()
+         slotSpot.img2.innerText = randomSlotImg()
+         slotSpot.img3.innerText = randomSlotImg()
+         counter++;
+         console.log(counter)
+         if(counter < 25){
+            spinNewImg()
+         }else{
+            counter = 0
+            if(slotSpot.img1.innerText === slotSpot.img2.innerText && slotSpot.img2.innerText === slotSpot.img3.innerText){
+               document.querySelector('#msg').innerText = "YOU WON!"
+               
+               
+            }else{
+               document.querySelector('#msg').innerText = "TRY AGAIN"
+            }
+
+         }
+
+      },100)
+
+   }
+     
 
 
-betButton.addEventListner('click')
+function resetCounter(){
+   counter = 0
+}
 
+
+
+
+let bankTotal = document.querySelector('#bank')
+let betButton = document.querySelector('#bet')
+let restartButton = document.querySelector('#restart')
+let spinButton = document.querySelector('#spin')
+
+
+spinButton.addEventListener('click', spinNewImg)
+restartButton.addEventListener('click', resetCounter)
+betButton.addEventListener('click',placeBet)
 
 
 // need random function using math.floor & math.random
