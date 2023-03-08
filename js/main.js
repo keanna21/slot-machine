@@ -1,6 +1,6 @@
 let slotImages = ['😍', '🤩', '😢'];
 
-let bank = prompt('Enter amount to put into your bank');
+let bank = 50
 document.querySelector('#bank').innerText = bank
 
 function randomSlotImg() {
@@ -10,7 +10,7 @@ function randomSlotImg() {
    return slotImages[randomImg]
    
 }
-console.log(randomSlotImg())
+//console.log(randomSlotImg())
 
 function placeBet(){
    bank -= 10
@@ -34,13 +34,13 @@ function spinNewImg(){
          slotSpot.img3.innerText = randomSlotImg()
          counter++;
          console.log(counter)
-         if(counter < 25){
+         if(counter < 15){
             spinNewImg()
          }else{
             counter = 0
             if(slotSpot.img1.innerText === slotSpot.img2.innerText && slotSpot.img2.innerText === slotSpot.img3.innerText){
                document.querySelector('#msg').innerText = "YOU WON!"
-               
+
                
             }else{
                document.querySelector('#msg').innerText = "TRY AGAIN"
@@ -51,12 +51,22 @@ function spinNewImg(){
       },100)
 
    }
-     
 
+   
+
+function resetBank(){
+   
+   document.querySelector('#restart').innertext = bank;
+   return
+   
+   
+}
 
 function resetCounter(){
    counter = 0
+
 }
+console.log(resetCounter)
 
 
 
@@ -68,8 +78,8 @@ let spinButton = document.querySelector('#spin')
 
 
 spinButton.addEventListener('click', spinNewImg)
-restartButton.addEventListener('click', resetCounter)
-betButton.addEventListener('click',placeBet)
+restartButton.addEventListener('click', resetBank)
+betButton.addEventListener('click', placeBet)
 
 
 // need random function using math.floor & math.random
