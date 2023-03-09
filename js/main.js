@@ -1,4 +1,4 @@
-
+console.log('js test');
 
 let slotImages = ['😍', '🤩', '😢'];
 
