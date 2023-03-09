@@ -24,32 +24,6 @@ function randomSlotImg() {
 
  let counter = 0;
 
-// function spinNewImg(){
-   
-//       setTimeout(function(){
-
-//          slotSpot.img1.innerText = randomSlotImg()
-//          slotSpot.img2.innerText = randomSlotImg()
-//          slotSpot.img3.innerText = randomSlotImg()
-//          counter++;
-//          console.log(counter)
-//          if(counter < 15){
-//             spinNewImg()
-//          }else{
-//             counter = 0
-//             if(slotSpot.img1.innerText === slotSpot.img2.innerText && slotSpot.img2.innerText === slotSpot.img3.innerText){
-//                document.querySelector('#msg').innerText = "YOU WON!"
-
-               
-//             }else{
-//                document.querySelector('#msg').innerText = "TRY AGAIN"
-//             }
-
-//          }
-
-//       },100)
-
-//    }
 function spinNewImg(){
    
       setTimeout(function(){
@@ -57,11 +31,12 @@ function spinNewImg(){
          slotSpot.img1.innerText = randomSlotImg()
          slotSpot.img2.innerText = randomSlotImg()
          slotSpot.img3.innerText = randomSlotImg()
-         
-         
+         counter++;
          console.log(counter)
-         
-            
+         if(counter < 25){
+            spinNewImg()
+         }else{
+            counter = 0
             if((slotSpot.img1.innerText === slotSpot.img2.innerText) && (slotSpot.img2.innerText === slotSpot.img3.innerText) &&(slotSpot.img1.innerText === slotSpot.img3.innerText) ){
                if(bank >= 0 && bank <= 100){
                   counter += 1
@@ -85,12 +60,53 @@ function spinNewImg(){
                }
                
             }
-
-         
+            
+         }
 
       },100)
 
    }
+// function spinNewImg(){
+   
+//       setTimeout(function(){
+
+//          slotSpot.img1.innerText = randomSlotImg()
+//          slotSpot.img2.innerText = randomSlotImg()
+//          slotSpot.img3.innerText = randomSlotImg()
+         
+         
+//          //console.log(counter)
+         
+            
+//             if((slotSpot.img1.innerText === slotSpot.img2.innerText) && (slotSpot.img2.innerText === slotSpot.img3.innerText) &&(slotSpot.img1.innerText === slotSpot.img3.innerText) ){
+//                if(bank >= 0 && bank <= 100){
+//                   counter += 1
+//                bank -= 10
+//                document.querySelector('#bank').innerText = bank;
+//                document.querySelector('#msg').innerText = "YOU WON!"
+
+//                }
+               
+            
+//             }else{
+//                counter += 1
+//                bank -= 10
+//                document.querySelector('#bank').innerText = bank;
+//                document.querySelector('#msg').innerText = "TRY AGAIN"
+//                if(bank === 0 ){ 
+                  
+//                   document.querySelector('#bank').innerText = bank;
+//                   document.querySelector('#msg').innerText = "GAME OVER"
+                  
+//                }
+               
+//             }
+
+         
+
+//       },100)
+
+//    }
    
 
 function gameReset(){
@@ -98,7 +114,7 @@ function gameReset(){
    bank = 100
     counter = 0
     document.querySelector('#bank').innerText = bank
-    spinNewImg()
+    
 }
 
 
