@@ -9,6 +9,9 @@ body {
 h1 {
     text-align: center;
     color:black;
+    text-shadow: 2px 2px #ff0026;
+    font-size: 50px;
+    margin: auto;
 }
 
 h4{
