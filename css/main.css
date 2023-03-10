@@ -1,14 +1,14 @@
 body {
+    background-image: url(https://i.imgur.com/TciaTUi.jpg);
+    background-position: center;
+    height: 95vh;
     
-    background-image: url(https://i.imgur.com/t5F9isV.jpg?1);
-   text-align: center;
-   height: 90vh;
-   background-size: cover;
+    background-size: cover;
 }
 
 h1 {
     text-align: center;
-    color:black;
+    color: white;
     text-shadow: 2px 2px #ff0026;
     font-size: 50px;
     margin: auto;
@@ -27,15 +27,16 @@ h4{
     position: absolute;
     bottom: 0;
     text-align: center;
-    color: black;
+    color: white;
     margin-left: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
 
 }
+
 #bank {
     text-align: center;
-    color: black;
+    color: white;
     position: absolute;
     bottom: 0;
     left: 100px;
@@ -47,28 +48,11 @@ h4{
 
  
 
- button#spin {
-    position: absolute;
-    bottom:0;
-    margin-left: -150px;
-    text-align: center;
-    background-color: crimson;
-    padding: 15px 32px;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 8px;
- }
-
- button#restart {
-    position:absolute;
-    bottom:0;
-    margin-right: 50px;
-    text-align: center;
-    background-color: crimson;
-    padding: 15px 32px;
-    display: inline-block;
-    font-size: 14px;
-    border-radius: 8px;
+ .buttons {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    margin-top: 100px;
  }
 
  div {
@@ -78,23 +62,34 @@ h4{
     display: inline;
     
  }
- .emoji {
+ 
+ .flexbox-container {
     display: flex;
-    justify-content: space-between;
-    max-width: 750px;
-    margin: -50px 75px 0px 125px;
-    padding: 200px 75px 200px 75px;
-    
+    justify-content: space-around;
+    margin-top: 200px;
+    margin-left: 10px;
+    font-size: 150px;
+
  }
- #img1{
- width: 50px;
- font-size: 170px;
+ 
+ #spin {
+    background-color: red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
  }
- #img2 {
- width: 50px;
- font-size: 170px;
- }
- #img3{
- width: 50px;
- font-size: 170px;
+ 
+ #restart{
+    background-color: red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
  }
