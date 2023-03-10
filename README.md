@@ -1,4 +1,6 @@
 # slot-machine
+<img width="1440" alt="Screen Shot 2023-03-09 at 7 13 59 PM" src="https://user-images.githubusercontent.com/125771588/224202609-51e8da82-7fd7-46cd-89f9-2fcb3f270aab.png">
+
 
 Try your luck and see if you win with this slot machine game. 
 
