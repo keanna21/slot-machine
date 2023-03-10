@@ -72,7 +72,7 @@ function randomSlotImg() {
 
    }
 
-/
+
    
 // function to reset game back to original bank amount also what element to store the info in.
 function gameReset(){
